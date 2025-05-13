@@ -26,7 +26,7 @@ body {
 
 div#backdrop {
     backdrop-filter: brightness(20%);
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     z-index: -1;
@@ -74,7 +74,7 @@ a.grid {
     width: 100%;
     height: 100%;
     text-decoration: none;
-    color: cyan;
+    color: darkgrey;
 }
 
 a.grid:hover {
