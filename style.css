@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Share+Tech&display=swap');
+
+* {
+    font-family: "Share Tech", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    /* background-color: hsl(0, 0%, 5%); */
+    background: url(bg.jpg);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    z-index: 0;
+}
+
+div#backdrop {
+    backdrop-filter: brightness(20%);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+div.main-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+body>h1 {
+    font-weight: bold;
+    font-size: 4rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+body>h2 {
+    font-size: 2rem;
+    text-align: center;
+    margin: 1rem 0;
+}
+
+.grid {
+    display: grid;
+    /* grid-template-columns: 1fr 1fr; */
+    align-items: center;
+}
+
+.mt-2 {
+    margin-top: 1rem;
+}
+
+a.grid {
+    padding: 1rem;
+    transition: background-color 500ms, box-shadow 500ms;
+    justify-content: center;
+    text-align: center;
+    max-width: 180px;
+    max-height: 180px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+}
+
+a.grid:hover {
+    background-color: hsla(0, 0%, 15%, 0.5);
+    box-shadow: 0 0 1rem 0.25rem;
+}
+
+a.grid>img {
+    height: 100px;
+    max-height: 100px;
+    width: auto;
+    margin: 0 auto;
+}
+
+span.highlight {
+    background: linear-gradient(to right, red, yellow);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
