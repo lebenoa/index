@@ -6,6 +6,7 @@
     --font-sans: "Share Tech", sans-serif;
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --color-green-500: oklch(72.3% 0.219 149.579);
     --color-gray-300: oklch(87.2% 0.01 258.338);
     --spacing: 0.25rem;
     --text-3xl: 1.875rem;
@@ -169,17 +170,53 @@
   .z-\[-1\] {
     z-index: -1;
   }
+  .mx-auto {
+    margin-inline: auto;
+  }
+  .mr-2 {
+    margin-right: calc(var(--spacing) * 2);
+  }
+  .mb-2 {
+    margin-bottom: calc(var(--spacing) * 2);
+  }
   .flex {
     display: flex;
+  }
+  .grid {
+    display: grid;
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
   }
   .h-full {
     height: 100%;
   }
+  .max-h-8 {
+    max-height: calc(var(--spacing) * 8);
+  }
+  .w-auto {
+    width: auto;
+  }
+  .w-fit {
+    width: fit-content;
+  }
   .w-full {
     width: 100%;
   }
+  .max-w-8 {
+    max-width: calc(var(--spacing) * 8);
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .grid-cols-2 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .flex-col {
+    flex-direction: column;
+  }
+  .flex-row {
+    flex-direction: row;
   }
   .flex-wrap {
     flex-wrap: wrap;
@@ -189,6 +226,28 @@
   }
   .justify-evenly {
     justify-content: space-evenly;
+  }
+  .gap-2 {
+    gap: calc(var(--spacing) * 2);
+  }
+  .bg-\[hsla\(0\,6\%\,10\%\,0\.7\)\] {
+    background-color: hsla(0,6%,10%,0.7);
+  }
+  .px-8 {
+    padding-inline: calc(var(--spacing) * 8);
+  }
+  .py-4 {
+    padding-block: calc(var(--spacing) * 4);
+  }
+  .text-center {
+    text-align: center;
+  }
+  .font-bold {
+    --tw-font-weight: var(--font-weight-bold);
+    font-weight: var(--font-weight-bold);
+  }
+  .text-green-500 {
+    color: var(--color-green-500);
   }
   .backdrop-blur-\[3px\] {
     --tw-backdrop-blur: blur(3px);
@@ -204,7 +263,7 @@
 * {
   font-family: "Share Tech", sans-serif;
 }
-body, html {
+html, body {
   height: 100%;
 }
 body {
@@ -283,6 +342,10 @@ a.grid-item>h3 {
   syntax: "*";
   inherits: false;
 }
+@property --tw-font-weight {
+  syntax: "*";
+  inherits: false;
+}
 @property --tw-backdrop-blur {
   syntax: "*";
   inherits: false;
@@ -319,10 +382,6 @@ a.grid-item>h3 {
   syntax: "*";
   inherits: false;
 }
-@property --tw-font-weight {
-  syntax: "*";
-  inherits: false;
-}
 @layer properties {
   @supports ((-webkit-hyphens: none) and (not (margin-trim: inline))) or ((-moz-orient: inline) and (not (color:rgb(from red r g b)))) {
     *, ::before, ::after, ::backdrop {
@@ -331,6 +390,7 @@ a.grid-item>h3 {
       --tw-rotate-z: initial;
       --tw-skew-x: initial;
       --tw-skew-y: initial;
+      --tw-font-weight: initial;
       --tw-backdrop-blur: initial;
       --tw-backdrop-brightness: initial;
       --tw-backdrop-contrast: initial;
@@ -340,7 +400,6 @@ a.grid-item>h3 {
       --tw-backdrop-opacity: initial;
       --tw-backdrop-saturate: initial;
       --tw-backdrop-sepia: initial;
-      --tw-font-weight: initial;
     }
   }
 }
